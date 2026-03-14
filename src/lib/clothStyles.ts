@@ -12,6 +12,7 @@ export type ClothStyle = {
   category: ClothStyleCategory;
   tagline: string;
   description: string;
+  price: number;
   colorPalette: string[];
   fabrics: string[];
   occasions: string[];
@@ -25,6 +26,7 @@ export const clothStyles: ClothStyle[] = [
     tagline: "Bold prints with a clean contemporary silhouette.",
     description:
       "A modern take on classic kitenge—structured lines, tailored comfort, and vibrant patterns that feel premium. Great for brand shoots and statement looks.",
+    price: 65000,
     colorPalette: ["Indigo", "Gold", "Cream", "Onyx"],
     fabrics: ["Cotton wax print", "Lining (optional)"],
     occasions: ["Events", "Brand campaigns", "Weekend"],
@@ -36,6 +38,7 @@ export const clothStyles: ClothStyle[] = [
     tagline: "Functional layers for everyday city style.",
     description:
       "A utility-inspired fit with pockets and structured panels. Designed for creators, teams, and brands that want a bold but wearable identity.",
+    price: 78000,
     colorPalette: ["Charcoal", "Olive", "Sand"],
     fabrics: ["Twill", "Ripstop"],
     occasions: ["Daily wear", "Content creation", "Team uniforms"],
@@ -47,6 +50,7 @@ export const clothStyles: ClothStyle[] = [
     tagline: "Sharp tailoring for confident, clean branding.",
     description:
       "A refined suit concept with a minimal aesthetic—perfect for founders, formal occasions, and timeless brand imagery.",
+    price: 220000,
     colorPalette: ["Midnight", "Stone", "White"],
     fabrics: ["Wool blend", "Cotton shirt"],
     occasions: ["Corporate", "Weddings", "Photoshoots"],
@@ -58,6 +62,7 @@ export const clothStyles: ClothStyle[] = [
     tagline: "Breathable, effortless, and camera-ready.",
     description:
       "Linen-based silhouettes that look premium in natural light. Ideal for warm weather collections and lifestyle branding.",
+    price: 95000,
     colorPalette: ["Ivory", "Clay", "Sage"],
     fabrics: ["Linen", "Cotton"],
     occasions: ["Brunch", "Travel", "Summer drops"],
@@ -69,6 +74,7 @@ export const clothStyles: ClothStyle[] = [
     tagline: "Elegant details with a luxury finish.",
     description:
       "A bridal concept focused on texture, drape, and intricate finishing. Built for unforgettable ceremonies and premium editorial work.",
+    price: 380000,
     colorPalette: ["Pearl", "Rose", "Champagne"],
     fabrics: ["Satin", "Organza", "Lace"],
     occasions: ["Weddings", "Editorial", "Runway"],
@@ -80,6 +86,7 @@ export const clothStyles: ClothStyle[] = [
     tagline: "Soft, durable styles for active days.",
     description:
       "Comfort-first design with playful color blocking. Great for family branding, seasonal kids collections, and matching sets.",
+    price: 42000,
     colorPalette: ["Sky", "Sun", "Mint"],
     fabrics: ["Cotton jersey", "Fleece"],
     occasions: ["School", "Play", "Family shoots"],
