@@ -67,13 +67,13 @@ export default function PreMarriage() {
             Capturing beautiful moments before saying I do
           </p>
           <div className="flex gap-4 mt-8">
-            <span className="px-4 py-2 bg-black rounded-full text-md">
+            <span className="px-2 py-2 bg-black rounded-full text-md">
               Engagement
             </span>
-            <span className="px-4 py-2 bg-yellow-700 rounded-full text-md">
+            <span className="px-2 py-2 bg-yellow-700 rounded-full text-md">
               Couple Shoot
             </span>
-            <span className="px-4 py-2 bg-gray-500 rounded-full text-md">
+            <span className="px-2 py-2 bg-gray-500 rounded-full text-md">
               Traditions
             </span>
           </div>
