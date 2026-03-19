@@ -34,13 +34,13 @@ export default function SpecialEventsPage() {
             <div className="flex gap-4">
               <Link
                 href="/consultation"
-                className="px-6 py-3 bg-amber-500 text-white font-semibold rounded-full hover:bg-purple-600 transition-all duration-300"
+                className="px-3 py-3 bg-amber-500 text-white font-semibold rounded-full hover:bg-purple-600 transition-all duration-300"
               >
                 Book Styling Session
               </Link>
               <Link
                 href="/lookbook/special-events"
-                className="px-6 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+                className="px-3 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
               >
                 Browse Collection
               </Link>
