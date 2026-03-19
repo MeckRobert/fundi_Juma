@@ -3,6 +3,18 @@ import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+// Define the image type interface
+interface GalleryImage {
+  id: number;
+  title: string;
+  category: string;
+  subcategory: string;
+  imageUrl: string;
+  description: string;
+  color: string;
+  occasion: string;
+}
+
 // Gallery categories
 const categories = [
   { id: "all", name: "All Styles", count: 24 },
@@ -12,8 +24,8 @@ const categories = [
   { id: "traditional", name: "Traditional", count: 5 },
 ];
 
-// Gallery images data
-const galleryImages = [
+// Gallery images data - typed as GalleryImage[]
+const galleryImages: GalleryImage[] = [
   // Pre-Wedding Collection
   {
     id: 1,
@@ -266,17 +278,17 @@ const galleryImages = [
 ];
 
 export default function GalleryPage() {
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [selectedImage, setSelectedImage] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [activeCategory, setActiveCategory] = useState<string>("all");
+  const [selectedImage, setSelectedImage] = useState<GalleryImage | null>(null);
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
 
   // Filter images based on category
   const filteredImages = activeCategory === "all" 
     ? galleryImages 
     : galleryImages.filter(img => img.category === activeCategory);
 
-  // Open modal with selected image
-  const openModal = (image) => {
+  // FIXED: Added type annotation for image parameter
+  const openModal = (image: GalleryImage) => {
     setSelectedImage(image);
     setIsModalOpen(true);
     document.body.style.overflow = 'hidden';
