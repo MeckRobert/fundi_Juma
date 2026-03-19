@@ -17,8 +17,8 @@ export default function Navbar() {
             <Image
               src="/images/10.PNG"
               alt="Fundi Juma Logo"
-              width={70}
-              height={30}
+              width={60}
+              height={45}
               className="h-auto rounded-full w-auto"
               priority
             />
@@ -53,17 +53,29 @@ export default function Navbar() {
               {/* Dropdown Menu */}
               <div className="absolute left-0 mt-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform group-hover:translate-y-0 translate-y-2">
                 <div className="bg-white rounded-xl shadow-lg py-2 border border-gray-100">
+                <Link
+                    href="/consultation"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
+                  >
+                    Consultation
+                  </Link>
                   <Link
                     href="/pre-marriage"
                     className="block px-4 py-3 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
                   >
-                    Pre-Marriage Collection
+                    Pre-Wedding
                   </Link>
                   <Link
-                    href="/after-marriage"
+                    href="/special_events"
                     className="block px-4 py-3 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
                   >
-                    After-Marriage Collection
+                    Special Event
+                  </Link>
+                  <Link
+                    href="/wedding_dress"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
+                  >
+                    Wedding dresses
                   </Link>
                 </div>
               </div>
@@ -86,12 +98,15 @@ export default function Navbar() {
 
           {/* Right Section - Desktop */}
           <div className="hidden md:flex md:items-center md:gap-4">
-            <button className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 font-medium text-sm">
-              Sign In
-            </button>
+            <Link 
+             href="/gallery"
+             className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition-all duration-300 font-medium text-sm"
+            >
+              Gallery
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Link */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="md:hidden rounded-lg p-2 text-gray-700 hover:bg-black hover:text-white transition-colors"
@@ -135,6 +150,9 @@ export default function Navbar() {
             Home
           </Link>
 
+          
+
+
           {/* Mobile Categories Dropdown */}
           <div className="space-y-2">
             <button
@@ -153,24 +171,47 @@ export default function Navbar() {
             </button>
             
             <div className={`pl-4 space-y-2 overflow-hidden transition-all duration-300 ${
-              isDropdownOpen ? 'max-h-40' : 'max-h-0'
+              isDropdownOpen ? 'max-h-50' : 'max-h-0'
             }`}>
+              <Link
+                href="/consultation"
+                className="block px-4 py-3 text-sm text-gray-600 hover:bg-black hover:text-white rounded-lg transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Consultation
+              </Link>
               <Link
                 href="/pre-marriage"
                 className="block px-4 py-3 text-sm text-gray-600 hover:bg-black hover:text-white rounded-lg transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
-                Pre-Marriage Collection
+                Pre Wedding 
               </Link>
               <Link
-                href="/after-marriage"
+                href="/special_events"
                 className="block px-4 py-3 text-sm text-gray-600 hover:bg-black hover:text-white rounded-lg transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
-                After-Marriage Collection
+                Special Events
+              </Link>
+              <Link
+                href="/wedding_dress"
+                className="block px-4 py-3 text-sm text-gray-600 hover:bg-black hover:text-white rounded-lg transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Wedding Dress
               </Link>
             </div>
           </div>
+
+          
+          <Link 
+            href="/contact" 
+            className="block px-4 py-3 text-gray-700 hover:bg-black hover:text-white rounded-lg transition-all duration-300 font-medium"
+            onClick={() => setIsOpen(false)}
+          >
+            Contact Us
+          </Link>
 
           <Link 
             href="/about" 
@@ -180,18 +221,13 @@ export default function Navbar() {
             About Us
           </Link>
 
-          <Link 
-            href="/contact" 
-            className="block px-4 py-3 text-gray-700 hover:bg-black hover:text-white rounded-lg transition-all duration-300 font-medium"
-            onClick={() => setIsOpen(false)}
-          >
-            Contact Us
-          </Link>
-
           <div className="pt-2">
-            <button className="w-full bg-black text-white px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-300 font-medium">
-              Sign In
-            </button>
+            <Link 
+             href="/gallery"
+             className="w-full  text-black px-6 py-3 rounded-lg hover:bg-gray-800 transition-all duration-300 font-medium"
+            >
+              Gallery
+            </Link>
           </div>
         </div>
       </div>

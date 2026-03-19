@@ -47,6 +47,9 @@ export default function HomeSlider() {
   return (
     <div className="relative w-full rounded-md h-[700px] mt-2 overflow-hidden">
       {/* Full Screen Background Images */}
+
+     
+
       {slides.map((slide, index) => (
         <div
           key={index}

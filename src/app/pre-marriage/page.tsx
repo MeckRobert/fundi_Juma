@@ -9,7 +9,7 @@ const preMarriageData = [
     category: "Engagement",
     title: "Romantic Engagement Moments",
     description: "Beautiful pre-wedding engagement shoots capturing love and commitment",
-    imageUrl: "https://images.unsplash.com/photo-1519741497674-611481863552?w=800&auto=format&fit=crop",
+    imageUrl: "/images/2.jpeg",
     couple: "Michael & Sarah",
     location: "Beach Resort",
     date: "March 2025"
@@ -19,7 +19,7 @@ const preMarriageData = [
     category: "Traditional",
     title: "Traditional Pre-Wedding Ceremony",
     description: "Cultural rituals and traditions before the big day",
-    imageUrl: "https://images.unsplash.com/photo-1587271636175-90d58cdad458?w=800&auto=format&fit=crop",
+    imageUrl: "/images/17.jpeg",
     couple: "David & Amina",
     location: "Family Home",
     date: "February 2025"
@@ -29,7 +29,7 @@ const preMarriageData = [
     category: "Couple Shoot",
     title: "Love Story in Pictures",
     description: "Capturing the essence of love before marriage",
-    imageUrl: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=800&auto=format&fit=crop",
+    imageUrl: "/images/8.jpeg",
     couple: "James & Mary",
     location: "City Park",
     date: "January 2025"
@@ -39,7 +39,7 @@ const preMarriageData = [
     category: "Preparations",
     title: "Getting Ready Together",
     description: "Special moments of preparation and anticipation",
-    imageUrl: "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=800&auto=format&fit=crop",
+    imageUrl: "/images/9.jpeg",
     couple: "Robert & Grace",
     location: "Wedding Venue",
     date: "December 2024"
@@ -67,13 +67,13 @@ export default function PreMarriage() {
             Capturing beautiful moments before saying I do
           </p>
           <div className="flex gap-4 mt-8">
-            <span className="px-6 py-2 bg-black rounded-full text-sm">
+            <span className="px-8 py-4 bg-black rounded-full text-md">
               Engagement
             </span>
-            <span className="px-6 py-2 bg-yellow-700 rounded-full text-sm">
+            <span className="px-8 py-4 bg-yellow-700 rounded-full text-md">
               Couple Shoot
             </span>
-            <span className="px-6 py-2 bg-gray-500 rounded-full text-sm">
+            <span className="px-8 py-4 bg-gray-500 rounded-full text-md">
               Traditions
             </span>
           </div>
