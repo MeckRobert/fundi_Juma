@@ -35,13 +35,13 @@ export default function PreWeddingPage() {
             <div className="flex gap-4">
               <Link
                 href="/consultation"
-                className="px-8 py-4   text-white font-semibold rounded-full bg-amber-500 transition-all duration-300"
+                className="px-6 py-3   text-white font-semibold rounded-full bg-amber-500 transition-all duration-300"
               >
                 Book Consultation
               </Link>
               <Link
                 href="/lookbook/pre-wedding"
-                className="px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+                className="px-6 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
               >
                 View Lookbook
               </Link>
