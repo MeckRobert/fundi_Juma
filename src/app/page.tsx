@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Testimonials from "@/components/Testimonars";
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, FormEvent } from "react"; // Added FormEvent here
 import Image from "next/image";
 
 const slides = [
@@ -42,7 +42,8 @@ export default function Home() {
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
   };
 
-  const handleSubscribe = (e) => {
+  // FIXED: Added type annotation for e parameter
+  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (email && email.includes("@")) {
       // Here you would typically send this to your API
@@ -176,7 +177,7 @@ export default function Home() {
             {[
               { name: "Special Event Wear", icon: "", link: "/special_events" },
               { name: "Pre Wedding Wear", icon: "", link: "/pre-marriage" },
-              { name: "Wedding Wear", icon: "s", link: "/wedding_dress" }
+              { name: "Wedding Wear", icon: "", link: "/wedding_dress" }
             ].map((category) => (
               <Link
                 key={category.name}
@@ -191,8 +192,8 @@ export default function Home() {
           </div>
         </section>
 
-       {/* Testimonials */}
-       <Testimonials />
+        {/* Testimonials */}
+        <Testimonials />
 
         {/* NEW: Get In Touch - Email Subscription Section */}
         <section className="mb-20 bg-gradient-to-r from-amber-50 to-yellow-50 rounded-3xl p-12 shadow-lg">
@@ -254,8 +255,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        
       </div>
     </main>
   );
