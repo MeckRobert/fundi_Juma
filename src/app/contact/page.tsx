@@ -1,20 +1,13 @@
 "use client";
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-// Define the form data interface
-interface FormData {
-  name: string;
-  email: string;
-  phone: string;
-  eventType: string;
-  eventDate: string;
-  message: string;
-}
+
+
 
 export default function ContactPage() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
@@ -23,11 +16,11 @@ export default function ContactPage() {
     message: ""
   });
   
-  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   // Properly typed event handlers
-  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -35,7 +28,7 @@ export default function ContactPage() {
     });
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
     
