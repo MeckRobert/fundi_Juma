@@ -39,7 +39,7 @@ export default function Navbar() {
                 className="flex items-center gap-1 text-gray-700 hover:bg-black hover:text-white px-4 py-2 rounded-full transition-all duration-300 font-medium"
                 onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               >
-                Categories
+                Our Services
                 <svg 
                   className={`w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`} 
                   fill="none" 
@@ -63,19 +63,19 @@ export default function Navbar() {
                     href="/pre-marriage"
                     className="block px-4 py-3 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
                   >
-                    Pre-Wedding
-                  </Link>
-                  <Link
-                    href="/special_events"
-                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
-                  >
-                    Special Event
+                    Pre-Wedding 
                   </Link>
                   <Link
                     href="/wedding_dress"
                     className="block px-4 py-3 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
                   >
-                    Wedding dresses
+                    Wedding Dressing
+                  </Link>
+                  <Link
+                    href="/special_event"
+                    className="block px-4 py-3 text-sm text-gray-700 hover:bg-black hover:text-white transition-colors duration-200"
+                  >
+                    Special Event Dressing
                   </Link>
                 </div>
               </div>
@@ -159,7 +159,7 @@ export default function Navbar() {
               onClick={() => setIsDropdownOpen(!isDropdownOpen)}
               className="flex w-full items-center justify-between px-4 py-3 text-gray-700 hover:bg-black hover:text-white rounded-lg transition-all duration-300 font-medium"
             >
-              <span>Categories</span>
+              <span>Our Services</span>
               <svg
                 className={`w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? 'rotate-180' : ''}`}
                 fill="none"
@@ -188,18 +188,18 @@ export default function Navbar() {
                 Pre Wedding 
               </Link>
               <Link
-                href="/special_events"
-                className="block px-4 py-3 text-sm text-gray-600 hover:bg-black hover:text-white rounded-lg transition-colors duration-200"
-                onClick={() => setIsOpen(false)}
-              >
-                Special Events
-              </Link>
-              <Link
                 href="/wedding_dress"
                 className="block px-4 py-3 text-sm text-gray-600 hover:bg-black hover:text-white rounded-lg transition-colors duration-200"
                 onClick={() => setIsOpen(false)}
               >
-                Wedding Dress
+                Wedding Dressing
+              </Link>
+              <Link
+                href="/special_events"
+                className="block px-4 py-3 text-sm text-gray-600 hover:bg-black hover:text-white rounded-lg transition-colors duration-200"
+                onClick={() => setIsOpen(false)}
+              >
+                Special Event Dressing
               </Link>
             </div>
           </div>
