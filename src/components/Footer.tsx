@@ -5,7 +5,7 @@ import React from "react";
 export default function Footer() {
   const phoneNumber = "+255718245045"; // Your Tanzania number
   const message = encodeURIComponent(
-    "Hello Fundi Juma, I would like to inquire about your clothing styles."
+    ""
   );
   return (
     <footer className="bg-gray-50 border-t border-gray-200">

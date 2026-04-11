@@ -33,7 +33,7 @@ export default function WeddingPage() {
             </p>
             <div className="flex gap-4">
               <Link
-                href="/consultation"
+                href="/signUp"
                 className="px-3 py-3 bg-amber-500  text-white font-semibold rounded-full hover:bg-amber-600 transition-all duration-300"
               >
                 Book Bridal Consultation

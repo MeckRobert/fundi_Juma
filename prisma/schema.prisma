@@ -1,0 +1,57 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  email     String    @unique
+  password  String
+  name      String?
+  role      UserRole  @default(CUSTOMER)
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
+  
+  bookings  Booking[]
+}
+
+model Booking {
+  id              String          @id @default(cuid())
+  userId          String
+  user            User            @relation(fields: [userId], references: [id])
+  consultationType ConsultationType
+  eventDate       DateTime
+  preferredDate   DateTime
+  preferredTime   String
+  fullName        String
+  email           String
+  phone           String
+  message         String?
+  status          BookingStatus   @default(PENDING)
+  adminNotes      String?
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+  confirmedAt     DateTime?
+}
+
+enum UserRole {
+  ADMIN
+  CUSTOMER
+}
+
+enum ConsultationType {
+  SPECIAL_EVENTS
+  PRE_WEDDING
+  WEDDING
+}
+
+enum BookingStatus {
+  PENDING
+  APPROVED
+  CANCELLED
+  COMPLETED
+}

@@ -11,7 +11,7 @@ export default function PreWeddingPage() {
       <section className="relative h-[600px] overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src="/images/21.jpeg"
+            src="/images/cons1.webp"
             alt="Pre-wedding couple"
             fill
             className="object-cover"
@@ -34,7 +34,7 @@ export default function PreWeddingPage() {
             </p>
             <div className="flex gap-4">
               <Link
-                href="/consultation"
+                href="/signUp"
                 className="px-3 py-3   text-white font-semibold rounded-full bg-amber-500 transition-all duration-300"
               >
                 Book Consultation

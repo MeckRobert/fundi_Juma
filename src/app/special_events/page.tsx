@@ -33,7 +33,7 @@ export default function SpecialEventsPage() {
             </p>
             <div className="flex gap-4">
               <Link
-                href="/consultation"
+                href="/signUp"
                 className="px-3 py-3 bg-amber-500 text-white font-semibold rounded-full hover:bg-purple-600 transition-all duration-300"
               >
                 Book Styling Session
