@@ -48,12 +48,14 @@ export async function POST(req: Request) {
       { expiresIn: '7d' }
     );
 
-    // Set cookie
-    cookies().set('token', token, {
+    // Set cookie - FIXED: await cookies() first
+    const cookieStore = await cookies();
+    cookieStore.set('token', token, {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
       maxAge: 7 * 24 * 60 * 60, // 7 days
+      path: '/',
     });
 
     // Return user info (excluding password)
