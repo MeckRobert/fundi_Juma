@@ -31,7 +31,7 @@ export default function NewBookingPage() {
         },
         body: JSON.stringify({
           ...formData,
-          userId: session?.user?.id,
+          userId: session?.user?.id || session?.user?.email, // Fallback to email if id doesn't exist
         }),
       });
 

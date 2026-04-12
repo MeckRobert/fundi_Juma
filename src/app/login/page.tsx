@@ -141,7 +141,7 @@ export default function LoginPage() {
           {/* Submit Button */}
           <button
             type="submit"
-            disabled={loading}f
+            disabled={loading}
             className="w-full flex items-center justify-center px-4 py-3 border border-transparent rounded-lg text-white bg-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-amber-500 transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
             {loading ? (
